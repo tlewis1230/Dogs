@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Dogs.Models.Dog>
+
+@{
+    ViewData["Title"] = "View";
+}
+
+<h2>View</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Breed)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Breed)
+                </td>
+                <td>                   
+                    @Html.ActionLink("Details", "Details", new { id=item.Breed  })                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

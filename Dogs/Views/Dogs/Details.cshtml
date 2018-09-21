@@ -1,0 +1,18 @@
+﻿@model Dogs.Models.Dog
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Model.Breed</h2>
+
+<div class="row">
+    @*Model Image *@
+    <div class="col-sm-4 col-xs-6">
+        <img class="thumbnail-img" src="@Model.ImageUrl" alt="" style="Width:100%; height:auto; padding:10px" />
+    </div>    
+</div>
+<div>
+    @Html.ActionLink("Back to List", "Index", new { /* id=item.PrimaryKey */ }) 
+
+</div>
